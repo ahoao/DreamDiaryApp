@@ -13,6 +13,9 @@
 		0769E984250F478400CD6C47 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0769E982250F478400CD6C47 /* Main.storyboard */; };
 		0769E986250F478600CD6C47 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0769E985250F478600CD6C47 /* Assets.xcassets */; };
 		0769E989250F478600CD6C47 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0769E987250F478600CD6C47 /* LaunchScreen.storyboard */; };
+		0769E993251058D400CD6C47 /* background.png in Resources */ = {isa = PBXBuildFile; fileRef = 0769E992251058D400CD6C47 /* background.png */; };
+		0769E995251087FB00CD6C47 /* DiaryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0769E994251087FB00CD6C47 /* DiaryViewController.swift */; };
+		2C686DF4EEA81505350CE5B3 /* Pods_DreamDiaryApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A12DD75EB07204D8CAEAD93C /* Pods_DreamDiaryApp.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +27,11 @@
 		0769E985250F478600CD6C47 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		0769E988250F478600CD6C47 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		0769E98A250F478600CD6C47 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		0769E992251058D400CD6C47 /* background.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = background.png; sourceTree = "<group>"; };
+		0769E994251087FB00CD6C47 /* DiaryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiaryViewController.swift; sourceTree = "<group>"; };
+		51F19459DFAF940C08640B0E /* Pods-DreamDiaryApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DreamDiaryApp.debug.xcconfig"; path = "Target Support Files/Pods-DreamDiaryApp/Pods-DreamDiaryApp.debug.xcconfig"; sourceTree = "<group>"; };
+		A12DD75EB07204D8CAEAD93C /* Pods_DreamDiaryApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DreamDiaryApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		A736C52ABAFC5BEB322D7CE4 /* Pods-DreamDiaryApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DreamDiaryApp.release.xcconfig"; path = "Target Support Files/Pods-DreamDiaryApp/Pods-DreamDiaryApp.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,6 +39,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2C686DF4EEA81505350CE5B3 /* Pods_DreamDiaryApp.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -42,6 +51,8 @@
 			children = (
 				0769E97B250F478400CD6C47 /* DreamDiaryApp */,
 				0769E97A250F478400CD6C47 /* Products */,
+				9CC2D919C407D9DA20EAA39C /* Pods */,
+				61C057244456526B2B8E070D /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -60,11 +71,31 @@
 				0769E97E250F478400CD6C47 /* SceneDelegate.swift */,
 				0769E980250F478400CD6C47 /* ViewController.swift */,
 				0769E982250F478400CD6C47 /* Main.storyboard */,
+				0769E994251087FB00CD6C47 /* DiaryViewController.swift */,
 				0769E985250F478600CD6C47 /* Assets.xcassets */,
+				0769E992251058D400CD6C47 /* background.png */,
 				0769E987250F478600CD6C47 /* LaunchScreen.storyboard */,
 				0769E98A250F478600CD6C47 /* Info.plist */,
 			);
 			path = DreamDiaryApp;
+			sourceTree = "<group>";
+		};
+		61C057244456526B2B8E070D /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				A12DD75EB07204D8CAEAD93C /* Pods_DreamDiaryApp.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		9CC2D919C407D9DA20EAA39C /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				51F19459DFAF940C08640B0E /* Pods-DreamDiaryApp.debug.xcconfig */,
+				A736C52ABAFC5BEB322D7CE4 /* Pods-DreamDiaryApp.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -74,9 +105,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 0769E98D250F478600CD6C47 /* Build configuration list for PBXNativeTarget "DreamDiaryApp" */;
 			buildPhases = (
+				10AF2E82968A7050B2034909 /* [CP] Check Pods Manifest.lock */,
 				0769E975250F478400CD6C47 /* Sources */,
 				0769E976250F478400CD6C47 /* Frameworks */,
 				0769E977250F478400CD6C47 /* Resources */,
+				D2A50EE922F93DB912B7B909 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -125,6 +158,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0769E993251058D400CD6C47 /* background.png in Resources */,
 				0769E989250F478600CD6C47 /* LaunchScreen.storyboard in Resources */,
 				0769E986250F478600CD6C47 /* Assets.xcassets in Resources */,
 				0769E984250F478400CD6C47 /* Main.storyboard in Resources */,
@@ -133,11 +167,54 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		10AF2E82968A7050B2034909 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-DreamDiaryApp-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		D2A50EE922F93DB912B7B909 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-DreamDiaryApp/Pods-DreamDiaryApp-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-DreamDiaryApp/Pods-DreamDiaryApp-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-DreamDiaryApp/Pods-DreamDiaryApp-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		0769E975250F478400CD6C47 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0769E995251087FB00CD6C47 /* DiaryViewController.swift in Sources */,
 				0769E981250F478400CD6C47 /* ViewController.swift in Sources */,
 				0769E97D250F478400CD6C47 /* AppDelegate.swift in Sources */,
 				0769E97F250F478400CD6C47 /* SceneDelegate.swift in Sources */,
@@ -282,6 +359,7 @@
 		};
 		0769E98E250F478600CD6C47 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 51F19459DFAF940C08640B0E /* Pods-DreamDiaryApp.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -300,6 +378,7 @@
 		};
 		0769E98F250F478600CD6C47 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = A736C52ABAFC5BEB322D7CE4 /* Pods-DreamDiaryApp.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
