@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -15,6 +15,7 @@
 		0769E989250F478600CD6C47 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0769E987250F478600CD6C47 /* LaunchScreen.storyboard */; };
 		0769E993251058D400CD6C47 /* background.png in Resources */ = {isa = PBXBuildFile; fileRef = 0769E992251058D400CD6C47 /* background.png */; };
 		0769E995251087FB00CD6C47 /* DiaryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0769E994251087FB00CD6C47 /* DiaryViewController.swift */; };
+		0769E9972510AD6200CD6C47 /* GoogleService-Info (1).plist in Resources */ = {isa = PBXBuildFile; fileRef = 0769E9962510AD6200CD6C47 /* GoogleService-Info (1).plist */; };
 		2C686DF4EEA81505350CE5B3 /* Pods_DreamDiaryApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A12DD75EB07204D8CAEAD93C /* Pods_DreamDiaryApp.framework */; };
 /* End PBXBuildFile section */
 
@@ -29,6 +30,7 @@
 		0769E98A250F478600CD6C47 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		0769E992251058D400CD6C47 /* background.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = background.png; sourceTree = "<group>"; };
 		0769E994251087FB00CD6C47 /* DiaryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiaryViewController.swift; sourceTree = "<group>"; };
+		0769E9962510AD6200CD6C47 /* GoogleService-Info (1).plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info (1).plist"; sourceTree = "<group>"; };
 		51F19459DFAF940C08640B0E /* Pods-DreamDiaryApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DreamDiaryApp.debug.xcconfig"; path = "Target Support Files/Pods-DreamDiaryApp/Pods-DreamDiaryApp.debug.xcconfig"; sourceTree = "<group>"; };
 		A12DD75EB07204D8CAEAD93C /* Pods_DreamDiaryApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DreamDiaryApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A736C52ABAFC5BEB322D7CE4 /* Pods-DreamDiaryApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DreamDiaryApp.release.xcconfig"; path = "Target Support Files/Pods-DreamDiaryApp/Pods-DreamDiaryApp.release.xcconfig"; sourceTree = "<group>"; };
@@ -76,6 +78,7 @@
 				0769E992251058D400CD6C47 /* background.png */,
 				0769E987250F478600CD6C47 /* LaunchScreen.storyboard */,
 				0769E98A250F478600CD6C47 /* Info.plist */,
+				0769E9962510AD6200CD6C47 /* GoogleService-Info (1).plist */,
 			);
 			path = DreamDiaryApp;
 			sourceTree = "<group>";
@@ -94,7 +97,6 @@
 				51F19459DFAF940C08640B0E /* Pods-DreamDiaryApp.debug.xcconfig */,
 				A736C52ABAFC5BEB322D7CE4 /* Pods-DreamDiaryApp.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -160,6 +162,7 @@
 			files = (
 				0769E993251058D400CD6C47 /* background.png in Resources */,
 				0769E989250F478600CD6C47 /* LaunchScreen.storyboard in Resources */,
+				0769E9972510AD6200CD6C47 /* GoogleService-Info (1).plist in Resources */,
 				0769E986250F478600CD6C47 /* Assets.xcassets in Resources */,
 				0769E984250F478400CD6C47 /* Main.storyboard in Resources */,
 			);

@@ -9,9 +9,18 @@ class DiaryViewController: UIViewController, TagListViewDelegate, UITextFieldDel
         let tagListView = TagListView()
         let textField = UITextField()
 
-        override func viewDidLoad() {
+    @IBOutlet weak var tagTextField: UITextField!
+    
+    
+    @IBOutlet weak var displayTagView: TagListView!
+    
+    
+    override func viewDidLoad() {
             super.viewDidLoad()
             self.setView()
+        
+        tagTextField.delegate = self
+        
         }
         func setView() {
 
@@ -54,7 +63,8 @@ class DiaryViewController: UIViewController, TagListViewDelegate, UITextFieldDel
         func textFieldShouldReturn(_ textField: UITextField) -> Bool {
             if 0 < textField.text!.count {
                 // タグを追加
-                tagListView.addTag(textField.text!)
+//                tagListView.addTag(textField.text!)
+                displayTagView.addTag(tagTextField.text!)
 
                 // テキストフィールドをクリアしてレイアウト調整
                 textField.text = nil
