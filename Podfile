@@ -14,6 +14,7 @@ pod 'Firebase/Auth'
 pod 'Firebase/Firestore'
 pod 'Firebase/Storage'
 pod 'FirebaseUI/Storage'
+pod 'FSCalendar', :git=> 'https://github.com/WenchaoD/FSCalendar'
 
 end
 
