@@ -37,7 +37,8 @@ class CalendarViewController: UIViewController,FSCalendarDataSource,FSCalendarDe
         self.dateView.tintColor = .red
         self.view.backgroundColor = .clear
         dateView.backgroundColor = .white
-        view.addSubview(dateView)
+       
+//        保存した日記の内容を書くようになる
         
         //日付表示設定
         Date.text = ""
@@ -130,7 +131,7 @@ class CalendarViewController: UIViewController,FSCalendarDataSource,FSCalendarDe
     let SecondController = storyboard.instantiateViewController(withIdentifier: "Insert")
     present(SecondController, animated: true, completion: nil)
 }
-//カレンダー処理(スケジュール表示処理)
+//カレンダー処理(スケジュール表示処理) ←Realmから引っ張ってくるコードを書く。
 func calendar(_ calendar: FSCalendar, didSelect date: Date, at monthPosition: FSCalendarMonthPosition){
     
     labelTitle.text = "主なスケジュール"
