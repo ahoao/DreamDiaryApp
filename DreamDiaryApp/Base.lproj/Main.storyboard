@@ -23,6 +23,9 @@
                                 <rect key="frame" x="100" y="604" width="214" height="34"/>
                                 <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <state key="normal" title="夢日記を読む"/>
+                                <connections>
+                                    <segue destination="NWM-me-IFh" kind="show" id="3rk-ej-Kl5"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Yoc-Zb-4lR">
                                 <rect key="frame" x="100" y="658" width="214" height="34"/>
@@ -66,19 +69,43 @@
         <!--Calendar View Controller-->
         <scene sceneID="vLu-Hh-H23">
             <objects>
-                <viewController id="NWM-me-IFh" customClass="CalendarViewController" customModule="DreamDiaryApp" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="Main" id="NWM-me-IFh" customClass="CalendarViewController" customModule="DreamDiaryApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="wU6-f4-e8g">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="background.png" translatesAutoresizingMaskIntoConstraints="NO" id="hXo-Wu-EIB">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="background.png" translatesAutoresizingMaskIntoConstraints="NO" id="hXo-Wu-EIB">
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
-                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Qzv-BT-YGR" customClass="FSCalendar">
-                                <rect key="frame" x="0.0" y="44" width="414" height="520"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Qzv-BT-YGR" customClass="FSCalendar">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="448"/>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="todayColor">
+                                        <color key="value" systemColor="systemYellowColor" red="1" green="0.80000000000000004" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="todaySelectionColor">
+                                        <color key="value" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="titleDefaultColor">
+                                        <color key="value" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="titleSelectionColor">
+                                        <color key="value" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="titleTodayColor">
+                                        <color key="value" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="titlePlaceholderColor">
+                                        <color key="value" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="titleWeekendColor">
+                                        <color key="value" systemColor="systemPinkColor" red="1" green="0.1764705882" blue="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="subtitleDefaultColor">
+                                        <color key="value" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
                                 <connections>
                                     <outlet property="dataSource" destination="NWM-me-IFh" id="Vo3-ob-uy2"/>
                                     <outlet property="delegate" destination="NWM-me-IFh" id="LBz-dc-EMN"/>
@@ -86,12 +113,42 @@
                             </view>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="Qzv-BT-YGR" firstAttribute="leading" secondItem="2fA-If-5gy" secondAttribute="leading" id="9wK-ea-ejc"/>
+                            <constraint firstItem="Qzv-BT-YGR" firstAttribute="trailing" secondItem="2fA-If-5gy" secondAttribute="trailing" id="CAw-Nj-bbd"/>
+                            <constraint firstItem="Qzv-BT-YGR" firstAttribute="top" secondItem="2fA-If-5gy" secondAttribute="top" id="E2i-7E-Gw4"/>
+                            <constraint firstItem="Qzv-BT-YGR" firstAttribute="trailing" secondItem="hXo-Wu-EIB" secondAttribute="trailing" id="Wfe-na-yKw"/>
+                            <constraint firstItem="Qzv-BT-YGR" firstAttribute="leading" secondItem="hXo-Wu-EIB" secondAttribute="leading" id="ctv-6k-eQ0"/>
+                            <constraint firstAttribute="bottomMargin" secondItem="hXo-Wu-EIB" secondAttribute="bottom" constant="-88" id="dB5-hM-OA5"/>
+                            <constraint firstItem="2fA-If-5gy" firstAttribute="bottom" secondItem="Qzv-BT-YGR" secondAttribute="bottom" constant="360" id="nOY-Zr-kOr"/>
+                            <constraint firstItem="hXo-Wu-EIB" firstAttribute="top" secondItem="Qzv-BT-YGR" secondAttribute="top" id="tGU-Zs-Dnp"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="2fA-If-5gy"/>
                     </view>
+                    <navigationItem key="navigationItem" id="2fc-pr-Bob"/>
+                    <connections>
+                        <outlet property="calendar" destination="Qzv-BT-YGR" id="vsR-Kb-L3o"/>
+                        <segue destination="YGL-06-2tC" kind="showDetail" id="Yxm-5u-KZY"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="9Dd-Br-6eR" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="143.47826086956522" y="843.75"/>
+        </scene>
+        <!--Diary Edit View Controller-->
+        <scene sceneID="8BL-LV-Z23">
+            <objects>
+                <viewController storyboardIdentifier="Insert" id="YGL-06-2tC" customClass="DiaryEditViewController" customModule="DreamDiaryApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="5F7-qf-gt2">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <viewLayoutGuide key="safeArea" id="HuP-SI-71j"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Y9D-3D-MM5" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="963" y="843"/>
         </scene>
         <!--Diary View Controller-->
         <scene sceneID="P4S-xn-yjL">
