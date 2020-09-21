@@ -111,6 +111,18 @@
                                     <outlet property="delegate" destination="NWM-me-IFh" id="LBz-dc-EMN"/>
                                 </connections>
                             </view>
+                            <tabBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Dtz-tn-NgQ">
+                                <rect key="frame" x="0.0" y="759" width="414" height="49"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <items>
+                                    <tabBarItem title="" systemItem="favorites" id="9Ga-Ui-ZHn"/>
+                                    <tabBarItem title="Item" id="z5R-LW-I5p"/>
+                                    <tabBarItem title="Item" id="Vpa-38-Ped"/>
+                                    <tabBarItem title="Item" id="cKu-A1-BQ8"/>
+                                    <tabBarItem systemItem="more" id="p01-KU-B4c"/>
+                                </items>
+                            </tabBar>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
@@ -264,6 +276,7 @@
                                 <state key="normal" title="保存"/>
                                 <connections>
                                     <action selector="diarySave:" destination="JUr-RH-F7F" eventType="touchUpInside" id="aSJ-QM-UbL"/>
+                                    <segue destination="Rap-X2-taf" kind="showDetail" id="IRa-io-Y5v"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="249" text="タグをつける" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Pem-kl-t8O">
@@ -336,8 +349,46 @@
             </objects>
             <point key="canvasLocation" x="953.62318840579712" y="117.85714285714285"/>
         </scene>
+        <!--Share View Controller-->
+        <scene sceneID="rIy-6H-IfJ">
+            <objects>
+                <viewController id="Rap-X2-taf" customClass="ShareViewController" customModule="DreamDiaryApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="zPB-Au-ddv">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="background.png" translatesAutoresizingMaskIntoConstraints="NO" id="wFI-Lh-w8T">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="saveimage.png" translatesAutoresizingMaskIntoConstraints="NO" id="SeW-ME-hHZ">
+                                <rect key="frame" x="0.0" y="242" width="414" height="313"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MbI-em-n6r">
+                                <rect key="frame" x="167" y="402" width="82" height="45"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <state key="normal" title="Tweetする"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AKw-tA-MCB">
+                                <rect key="frame" x="163" y="455" width="93" height="34"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <state key="normal" title="キャンセル"/>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <viewLayoutGuide key="safeArea" id="Jp7-9l-EEt"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="RTk-aW-CI7" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1678.2608695652175" y="117.85714285714285"/>
+        </scene>
     </scenes>
     <resources>
         <image name="background.png" width="192" height="289.44000244140625"/>
+        <image name="saveimage.png" width="241" height="182"/>
     </resources>
 </document>
