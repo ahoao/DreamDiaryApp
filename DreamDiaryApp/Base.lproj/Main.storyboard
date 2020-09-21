@@ -137,7 +137,7 @@
         <!--Diary Edit View Controller-->
         <scene sceneID="8BL-LV-Z23">
             <objects>
-                <viewController storyboardIdentifier="Insert" id="YGL-06-2tC" customClass="DiaryEditViewController" customModule="DreamDiaryApp" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="YGL-06-2tC" customClass="DiaryEditViewController" customModule="DreamDiaryApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="5F7-qf-gt2">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -152,7 +152,7 @@
         <!--Diary View Controller-->
         <scene sceneID="P4S-xn-yjL">
             <objects>
-                <viewController id="JUr-RH-F7F" customClass="DiaryViewController" customModule="DreamDiaryApp" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="Insert" id="JUr-RH-F7F" customClass="DiaryViewController" customModule="DreamDiaryApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="BWF-oN-3r7">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -320,7 +320,14 @@
                     </view>
                     <navigationItem key="navigationItem" id="KSN-HK-b7f"/>
                     <connections>
+                        <outlet property="diaryTextView" destination="PGR-6d-0YX" id="98X-jL-6Ll"/>
                         <outlet property="displayTagView" destination="Ey9-Af-CDU" id="ThG-yi-guv"/>
+                        <outlet property="feelingButton1" destination="es5-NS-VhT" id="775-jX-HNj"/>
+                        <outlet property="feelingButton2" destination="NTN-pF-6ZG" id="fnD-Tz-pfG"/>
+                        <outlet property="feelingButton3" destination="Juu-Tp-3KA" id="9IB-of-Buz"/>
+                        <outlet property="feelingButton4" destination="D9r-Wf-DWP" id="9s6-Ug-ZvT"/>
+                        <outlet property="feelingButton5" destination="abv-7b-M83" id="hkU-js-3PD"/>
+                        <outlet property="feelingButton6" destination="k2v-AH-GIi" id="01a-Dg-gKN"/>
                         <outlet property="tagTextField" destination="xCE-DE-ug1" id="NnZ-V3-ik3"/>
                     </connections>
                 </viewController>

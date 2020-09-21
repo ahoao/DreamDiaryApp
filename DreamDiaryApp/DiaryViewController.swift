@@ -12,27 +12,39 @@ class DiaryViewController: UIViewController, TagListViewDelegate, UITextFieldDel
     let tagListView = TagListView()
     let textField = UITextField()
     
+    @IBOutlet weak var diaryTextView: UITextView!
     @IBOutlet weak var tagTextField: UITextField!
     @IBOutlet weak var displayTagView: TagListView!
     
-      var date: String! // 受け皿の用意
+    
+
+    @IBOutlet weak var feelingButton1: UIButton!
+    @IBOutlet weak var feelingButton2: UIButton!
+    @IBOutlet weak var feelingButton3: UIButton!
+    @IBOutlet weak var feelingButton4: UIButton!
+    @IBOutlet weak var feelingButton5: UIButton!
+    @IBOutlet weak var feelingButton6: UIButton!
+    
+    
+      var diary: Diary! // 受け皿の用意
     
     @IBAction func diarySave(_ sender: Any) {
-     let realm = try! Realm() // Realmの初期化
+     let realm = try! Realm()
 
-     let diary = Diary() // モデルのインスタンス化
-     diary.content = date
-     diary.tag = date
+         try! realm.write {
+             //日付表示の内容とスケジュール入力の内容が書き込まれる。
+             let Events = [Diary(value: ["content": y_text.text, "tag": eventText.text])]
+             realm.add(Events)
+             print("データ書き込み中")
+         }
 
-     try! realm.write {
-        realm.add(content : Content) // Realmに追加
-     }
+     print("データ書き込み完了")
 
-     self.dismiss(animated: true, completion: nil) // 前の画面に戻る
+     //前のページに戻る
+     dismiss(animated: true, completion: nil)
+        
+        
         }
-    
-    // Realmインスタンスを取得する
-    let realm = try! Realm()  // ←追加
 
     // DB内のタスクが格納されるリスト。
     // 以降内容をアップデートするとリスト内は自動的に更新される。

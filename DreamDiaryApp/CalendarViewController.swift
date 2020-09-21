@@ -1,11 +1,3 @@
-//
-//  CalendarViewController.swift
-//  DreamDiaryApp
-//
-//  Created by Ao Nagasawa on 2020/09/17.
-//  Copyright © 2020 Ao.Nagasawa. All rights reserved.
-//
-
 import UIKit
 import FSCalendar
 import CalculateCalendarLogic
@@ -16,6 +8,14 @@ let w = UIScreen.main.bounds.size.width
 let h = UIScreen.main.bounds.size.height
 
 class CalendarViewController: UIViewController,FSCalendarDataSource,FSCalendarDelegate,FSCalendarDelegateAppearance {
+    
+    
+    //画面遷移(スケジュール登録ページ)
+    @objc func onClick(_: UIButton) {
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        let SecondController = storyboard.instantiateViewController(withIdentifier: "Insert")
+        present(SecondController, animated: true, completion: nil)
+    }
     
     //スケジュール内容
     let labelDate = UILabel(frame: CGRect(x: 5, y: 580, width: 400, height: 50))
@@ -37,8 +37,6 @@ class CalendarViewController: UIViewController,FSCalendarDataSource,FSCalendarDe
         self.dateView.tintColor = .red
         self.view.backgroundColor = .clear
         dateView.backgroundColor = .white
-       
-//        保存した日記の内容を書くようになる
         
         //日付表示設定
         Date.text = ""
@@ -58,7 +56,7 @@ class CalendarViewController: UIViewController,FSCalendarDataSource,FSCalendarDe
         view.addSubview(labelDate)
         
         //スケジュール追加ボタン
-        let addBtn = UIButton(frame: CGRect(x: w - 70, y: h - 70, width: 60, height: 60))
+        let addBtn = UIButton(frame: CGRect(x: w - 100, y: h - 100, width: 60, height: 60))
         addBtn.setTitle("+", for: UIControl.State())
         addBtn.setTitleColor(.white, for: UIControl.State())
         addBtn.backgroundColor = .orange
@@ -67,6 +65,7 @@ class CalendarViewController: UIViewController,FSCalendarDataSource,FSCalendarDe
         view.addSubview(addBtn)
         
     }
+    
     fileprivate let gregorian: Calendar = Calendar(identifier: .gregorian)
     fileprivate lazy var dateFormatter: DateFormatter = {
         let formatter = DateFormatter()
@@ -123,18 +122,10 @@ class CalendarViewController: UIViewController,FSCalendarDataSource,FSCalendarDe
         return nil
     }
     
-
-
-//画面遷移(スケジュール登録ページ)
-@objc func onClick(_: UIButton) {
-    let storyboard = UIStoryboard(name: "Main", bundle: nil)
-    let SecondController = storyboard.instantiateViewController(withIdentifier: "Insert")
-    present(SecondController, animated: true, completion: nil)
-}
-//カレンダー処理(スケジュール表示処理) ←Realmから引っ張ってくるコードを書く。
+//カレンダー処理(スケジュール表示処理)
 func calendar(_ calendar: FSCalendar, didSelect date: Date, at monthPosition: FSCalendarMonthPosition){
     
-    labelTitle.text = "主なスケジュール"
+    labelTitle.text = "選んだ気持ち"
     labelTitle.backgroundColor = .orange
     view.addSubview(labelTitle)
     
@@ -173,7 +164,5 @@ func calendar(_ calendar: FSCalendar, didSelect date: Date, at monthPosition: FS
     
     
 }
-
-
-
 }
+

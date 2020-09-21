@@ -1,11 +1,3 @@
-//
-//  ViewController.swift
-//  DreamDiaryApp
-//
-//  Created by Ao Nagasawa on 2020/09/14.
-//  Copyright © 2020 Ao.Nagasawa. All rights reserved.
-//
-
 import UIKit
 
 
