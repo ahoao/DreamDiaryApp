@@ -111,18 +111,6 @@
                                     <outlet property="delegate" destination="NWM-me-IFh" id="LBz-dc-EMN"/>
                                 </connections>
                             </view>
-                            <tabBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Dtz-tn-NgQ">
-                                <rect key="frame" x="0.0" y="759" width="414" height="49"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
-                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <items>
-                                    <tabBarItem title="" systemItem="favorites" id="9Ga-Ui-ZHn"/>
-                                    <tabBarItem title="Item" id="z5R-LW-I5p"/>
-                                    <tabBarItem title="Item" id="Vpa-38-Ped"/>
-                                    <tabBarItem title="Item" id="cKu-A1-BQ8"/>
-                                    <tabBarItem systemItem="more" id="p01-KU-B4c"/>
-                                </items>
-                            </tabBar>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
