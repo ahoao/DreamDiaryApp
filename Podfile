@@ -17,6 +17,7 @@ pod 'FirebaseUI/Storage'
 pod 'FSCalendar', :git=> 'https://github.com/WenchaoD/FSCalendar'
 pod 'CalculateCalendarLogic'
 pod 'RealmSwift'
+pod 'CircleBar'
 
 end
 

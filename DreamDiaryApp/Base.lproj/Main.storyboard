@@ -19,19 +19,6 @@
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="B33-AO-a18">
-                                <rect key="frame" x="100" y="604" width="214" height="34"/>
-                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <state key="normal" title="夢日記を読む"/>
-                                <connections>
-                                    <segue destination="NWM-me-IFh" kind="show" id="3rk-ej-Kl5"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Yoc-Zb-4lR">
-                                <rect key="frame" x="100" y="658" width="214" height="34"/>
-                                <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <state key="normal" title="夢分析"/>
-                            </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6vb-1Z-TrQ">
                                 <rect key="frame" x="100" y="494" width="214" height="60"/>
                                 <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -46,39 +33,98 @@
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
-                            <constraint firstItem="Yoc-Zb-4lR" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="100" id="17M-HB-7C9"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Yoc-Zb-4lR" secondAttribute="trailing" constant="100" id="2DQ-P8-EaJ"/>
                             <constraint firstItem="6vb-1Z-TrQ" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="6rN-k6-nHR"/>
-                            <constraint firstItem="Yoc-Zb-4lR" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Dai-OM-BQw"/>
-                            <constraint firstItem="B33-AO-a18" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="100" id="Gwd-1e-oC4"/>
-                            <constraint firstItem="B33-AO-a18" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="REf-L2-z4e"/>
-                            <constraint firstItem="Yoc-Zb-4lR" firstAttribute="top" secondItem="B33-AO-a18" secondAttribute="bottom" constant="20" id="YLn-o7-mJW"/>
                             <constraint firstItem="6vb-1Z-TrQ" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="450" id="ZAq-Rs-rWJ"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="6vb-1Z-TrQ" secondAttribute="trailing" constant="100" id="dJi-GU-Dor"/>
                             <constraint firstItem="6vb-1Z-TrQ" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="100" id="lAC-vZ-ZtQ"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="B33-AO-a18" secondAttribute="trailing" constant="100" id="vVr-8C-hbv"/>
-                            <constraint firstItem="B33-AO-a18" firstAttribute="top" secondItem="6vb-1Z-TrQ" secondAttribute="bottom" constant="50" id="zOt-gr-gwb"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <tabBarItem key="tabBarItem" springLoaded="YES" systemItem="favorites" id="teB-N0-udW"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="137.68115942028987" y="117.85714285714285"/>
+            <point key="canvasLocation" x="784" y="121"/>
         </scene>
-        <!--Calendar View Controller-->
+        <!--夢分析-->
+        <scene sceneID="Pde-RQ-hrz">
+            <objects>
+                <viewController id="cVJ-Zr-G8a" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="A4k-CO-aWU">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="background.png" translatesAutoresizingMaskIntoConstraints="NO" id="zln-oP-P4H">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <viewLayoutGuide key="safeArea" id="xpI-TE-AbN"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="夢分析" id="ZyQ-V6-ro3"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="mUO-DP-U9Y" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4" y="121"/>
+        </scene>
+        <!--検索-->
+        <scene sceneID="gbm-N5-8m4">
+            <objects>
+                <viewController id="Jze-c1-Ziv" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="uyV-dC-0on">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="background.png" translatesAutoresizingMaskIntoConstraints="NO" id="NJh-Y2-h7J">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <viewLayoutGuide key="safeArea" id="W0g-8f-0qt"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="検索" id="VRI-49-wjf"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="x0u-T4-mCd" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1566.6666666666667" y="117.85714285714285"/>
+        </scene>
+        <!--設定-->
+        <scene sceneID="vp6-r1-ks7">
+            <objects>
+                <viewController id="3zS-lK-7ys" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="6BI-cP-7v2">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="background.png" translatesAutoresizingMaskIntoConstraints="NO" id="XOT-NO-NOR">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <viewLayoutGuide key="safeArea" id="aKE-yI-Acy"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="設定" id="3IV-hC-0z1"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Fco-0w-ooW" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2279.7101449275365" y="120.53571428571428"/>
+        </scene>
+        <!--カレンダー-->
         <scene sceneID="vLu-Hh-H23">
             <objects>
                 <viewController storyboardIdentifier="Main" id="NWM-me-IFh" customClass="CalendarViewController" customModule="DreamDiaryApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="wU6-f4-e8g">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="background.png" translatesAutoresizingMaskIntoConstraints="NO" id="hXo-Wu-EIB">
-                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                                <rect key="frame" x="0.0" y="44" width="414" height="857"/>
                             </imageView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Qzv-BT-YGR" customClass="FSCalendar">
-                                <rect key="frame" x="0.0" y="0.0" width="414" height="448"/>
+                                <rect key="frame" x="0.0" y="44" width="414" height="409"/>
                                 <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="color" keyPath="todayColor">
@@ -125,6 +171,7 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="2fA-If-5gy"/>
                     </view>
+                    <tabBarItem key="tabBarItem" title="カレンダー" id="2af-Jv-2Pb"/>
                     <navigationItem key="navigationItem" id="2fc-pr-Bob"/>
                     <connections>
                         <outlet property="calendar" destination="Qzv-BT-YGR" id="vsR-Kb-L3o"/>
@@ -132,7 +179,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="9Dd-Br-6eR" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="143.47826086956522" y="843.75"/>
+            <point key="canvasLocation" x="-772" y="118"/>
         </scene>
         <!--Diary Edit View Controller-->
         <scene sceneID="8BL-LV-Z23">
@@ -147,7 +194,28 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Y9D-3D-MM5" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="963" y="843"/>
+            <point key="canvasLocation" x="-772" y="820"/>
+        </scene>
+        <!--Tab Bar Controller-->
+        <scene sceneID="DVe-8V-8JH">
+            <objects>
+                <tabBarController id="TqJ-Uv-fls" sceneMemberID="viewController">
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="SRs-PS-SPp">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="49"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="NWM-me-IFh" kind="relationship" relationship="viewControllers" id="O3j-WE-Juy"/>
+                        <segue destination="cVJ-Zr-G8a" kind="relationship" relationship="viewControllers" id="MEg-Kw-9Rh"/>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="viewControllers" id="byS-Nj-6qT"/>
+                        <segue destination="Jze-c1-Ziv" kind="relationship" relationship="viewControllers" id="RIC-rI-nLD"/>
+                        <segue destination="3zS-lK-7ys" kind="relationship" relationship="viewControllers" id="gPU-g7-cME"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="hh0-DV-1T7" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="783" y="-782"/>
         </scene>
         <!--Diary View Controller-->
         <scene sceneID="P4S-xn-yjL">
@@ -273,7 +341,7 @@
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Ey9-Af-CDU" customClass="TagListView" customModule="TagListView">
+                            <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Ey9-Af-CDU" customClass="TagListView" customModule="TagListView">
                                 <rect key="frame" x="20" y="420" width="374" height="48"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                             </view>
@@ -335,7 +403,7 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Zuq-4H-thH" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <exit id="wZi-J2-A1c" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="953.62318840579712" y="117.85714285714285"/>
+            <point key="canvasLocation" x="783" y="820"/>
         </scene>
         <!--Share View Controller-->
         <scene sceneID="rIy-6H-IfJ">
@@ -372,7 +440,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="RTk-aW-CI7" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1678.2608695652175" y="117.85714285714285"/>
+            <point key="canvasLocation" x="783" y="1531"/>
         </scene>
     </scenes>
     <resources>
